@@ -16,5 +16,8 @@ public class RectangleRunner {
         int plot3Area = plot3.calculateArea();
         int totalArea = plot1Area + plot2Area + plot3Area;
         System.out.print("These three plots require " + totalArea + " square feet of seed.");
+
+
+
     }
 }

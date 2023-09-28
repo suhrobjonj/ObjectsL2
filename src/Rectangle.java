@@ -1,39 +1,50 @@
-// Rectangle class definition
 public class Rectangle {
 
     // instance variables
     private int length;
     private int width;
 
-    // constructor method for creating Rectangle objects;
-    // instance variables are set here using the values passed as arguments
-    public Rectangle(int len, int wid) {
-        length = len;
-        width = wid;
+    // constructor to create a Rectangle object with a particular width and length
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
     }
 
-    // method that calculates and returns area
+    // constructor to create a Rectangle object with equal width and length (a square)
+    public Rectangle(int side) {
+        length = side;
+        width = side;
+    }
+
+    // "no-argument" constructor which creates a Rectangle object with default values
+    public Rectangle() {
+        length = 100;
+        width = 50;
+    }
+
+    // "getter" method that returns the length of the Rectangle
+    public int getLength() {
+        return length;
+    }
+
+    // "setter" methods that sets the length of the Rectangle to a new length
+    public void setLength(int newLength) {
+        length = newLength;
+    }
+
+    // "getter" method that returns the width of the Rectangle
+    public int getWidth() {
+        return width;
+    }
+
+    // "setter" methods that sets the width of the Rectangle to a new width
+    public void setWidth(int newWidth) {
+        width = newWidth;
+    }
+
+    // calculates and returns the area of the Rectangle
     public int calculateArea() {
-        return length * width;
-    }
-
-    // method that calculates and prints area
-    public void printArea() {
-        int area = calculateArea();
-        System.out.println("My area is " + area);
-    }
-
-    // method that calculates and returns volume
-    // of a box with length, width, and height
-    public double calculateBoxVolume(double height) {
-        return calculateArea() * height;
-    }
-
-    // method that calculates and prints volume
-    // of a box with length, width, and height
-    public void printBoxVolume(double height) {
-        double volume = calculateArea() * height;
-        System.out.println("The volume is: " + volume);
+        return width * length;
     }
 }
 

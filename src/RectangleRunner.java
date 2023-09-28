@@ -2,26 +2,19 @@ import java.util.Scanner;
 
 public class RectangleRunner {
     public static void main(String[] args) {
-        Scanner myScanner = new Scanner(System.in);
-        System.out.print("Enter rectangle 1 length: ");
-        int rect1Length = myScanner.nextInt();
-        System.out.print("Enter rectangle 1 width: ");
-        int rect1Width = myScanner.nextInt();
-        System.out.print("Enter rectangle 1 height: ");
-        double rect1Height = myScanner.nextDouble();
-        System.out.print("Enter rectangle 2 length: ");
-        int rect2Length = myScanner.nextInt();
-        System.out.print("Enter rectangle 2 width: ");
-        int rect2Width = myScanner.nextInt();
-        System.out.print("Enter rectangle 2 height: ");
-        double rect2Height = myScanner.nextDouble();
+        Rectangle plot1 = new Rectangle(150,200);
+        Rectangle plot2 = new Rectangle(125);
+        Rectangle plot3 = new Rectangle();
 
-        // finish the program as described below
+        plot1.setWidth(75);
+        plot2.setWidth(75);
+        plot2.setLength(75);
+        plot3.setWidth(75);
 
-        Rectangle rect1 = new Rectangle(rect1Length, rect1Width);
-        Rectangle rect2 = new Rectangle(rect2Length, rect2Width);
-
-        System.out.println("Rectangle 1's Area: " + rect1.calculateArea() + ", Volume: " + rect1.calculateBoxVolume(rect1Height));
-        System.out.println("Rectangle 2's Area: " + rect2.calculateArea() + ", Volume: " + rect2.calculateBoxVolume(rect2Height));
+        int plot1Area = plot1.calculateArea();
+        int plot2Area = plot2.calculateArea();
+        int plot3Area = plot3.calculateArea();
+        int totalArea = plot1Area + plot2Area + plot3Area;
+        System.out.print("These three plots require " + totalArea + " square feet of seed.");
     }
 }

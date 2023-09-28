@@ -29,8 +29,8 @@ public class Point {
     }
 
     // "setter" methods that sets the x of the Point to a new x
-    public void setX(int newx) {
-        x = newx;
+    public void setX(int newX) {
+        x = newX;
     }
 
     // "getter" method that returns the y of the Point
@@ -39,8 +39,8 @@ public class Point {
     }
 
     // "setter" methods that sets the y of the Point to a new y
-    public void setY(int newy) {
-        y = newy;
+    public void setY(int newY) {
+        y = newY;
     }
 
     // calculates and returns the area of the Point
